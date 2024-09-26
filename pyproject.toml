@@ -1,0 +1,20 @@
+[project]
+name = "lookcat"
+description = "simple python watchdog"
+authors = [{ "name" = "Michaël PAULON", "email" = "michael@paulon.org" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+dynamic = ["version"]
+
+[project.scripts]
+lookcat = "lookcat.__main__:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "lookcat/__version__.py"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
